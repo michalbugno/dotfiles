@@ -1,0 +1,16 @@
+# Write your default config options here!
+
+subfont-text-scale=2.5
+subcp="cp1250"
+really-quiet="1"
+font="/Library/Fonts/Trebuchet MS.ttf"
+ffactor="1"
+subfont-blur="2.0"
+sub-bg-alpha="0"
+sub-bg-color="0"
+subpos="100"
+spuaa="4"
+sub-fuzziness="1"
+subfont-osd-scale="4.0"
+double="yes"
+af="volume=10"
