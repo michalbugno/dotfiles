@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $# -eq 0 ]
 then
   echo "Usage: `basename $0` <command>"
@@ -8,9 +10,17 @@ PROGS=("$HOME/.gemrc" "$HOME/.gitconfig" "$HOME/.mplayer" "$HOME/.profile"
        "$HOME/.ssh" "$HOME/.vim" "$HOME/.vimrc" "/etc/hosts")
 CMD=$1
 
-if [ $CMD == "fetch" ]
-then
+case $CMD in
+
+  fetch)
   for PROG in ${PROGS[@]}; do
-    cp -vR $PROG ./
+    echo "cp -r $PROG ./"
+    cp -R $PROG ./
   done
-fi
+  ;;
+
+  *)
+  echo "Wrong parameter: $CMD"
+  exit 1
+
+esac
