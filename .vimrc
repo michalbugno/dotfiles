@@ -1,3 +1,8 @@
+com Q q
+com W w
+com Wq wq
+com WQ wq
+
 colorscheme wombat
 
 set visualbell t_vb=
@@ -152,7 +157,7 @@ set cursorline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set font type and height
 " set guifont=Monaco:h14
-set guifont=DejaVu\ Sans\ Mono:h12
+set guifont=Inconsolata:h14
 
 " nice antialiasing (default for macvim)
 set antialias
