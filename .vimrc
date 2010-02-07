@@ -96,12 +96,6 @@ set smartcase
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 4 displaying text
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" number of columns
-set columns=150
-
-" number of lines
-set lines=35
-
 " show special chars at eol/trailing spaces etc.
 set list
 
@@ -122,7 +116,7 @@ set numberwidth=3
 set background=dark
 
 " enable syntax highlighting
-set syntax=ON
+syntax on
 
 " enable highlighting the search
 set hlsearch
@@ -163,7 +157,9 @@ set guifont=Inconsolata:h14
 set antialias
 
 " when fullscreen, set the lines and columns to max (macvim)
-set fuoptions=maxvert,maxhorz
+if has("gui_macvim")
+  set fuoptions=maxvert,maxhorz
+endif
 
 " don't display menu
 set guioptions-=T
