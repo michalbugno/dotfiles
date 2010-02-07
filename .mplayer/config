@@ -3,7 +3,7 @@
 subfont-text-scale=2.5
 subcp="cp1250"
 really-quiet="1"
-font="/Library/Fonts/Trebuchet MS.ttf"
+font="Futura"
 ffactor="1"
 subfont-blur="2.0"
 sub-bg-alpha="0"
