@@ -4,15 +4,13 @@ then
   exit
 fi
 
+PROGS=("$HOME/.gemrc" "$HOME/.gitconfig" "$HOME/.mplayer" "$HOME/.profile"
+       "$HOME/.ssh" "$HOME/.vim" "$HOME/.vimrc" "/etc/hosts")
 CMD=$1
+
 if [ $CMD == "fetch" ]
 then
-  cp    ~/.gemrc ./
-  cp    ~/.gitconfig ./
-  cp -r ~/.mplayer ./
-  cp -r ~/.profile ./
-  cp -r ~/.ssh ./
-  cp -r ~/.vim   ./
-  cp    ~/.vimrc ./
-  cp    /etc/hosts ./
+  for PROG in ${PROGS[@]}; do
+    cp -vR $PROG ./
+  done
 fi
