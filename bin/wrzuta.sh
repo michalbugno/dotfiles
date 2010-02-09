@@ -5,4 +5,8 @@ then
   exit
 fi
 URL=${URL//\/audio\//\/sr\/f\/}
-wget -c $URL
+FILENAME=`basename $URL`".mp3"
+wget -c $URL -O $FILENAME
+open $FILENAME
+sleep 20
+rm $FILENAME
