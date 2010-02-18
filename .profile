@@ -16,9 +16,9 @@ function set_prompt {
   BLUE="\[\033[00;34m\]"
   if [ $EXIT_STATUS -eq 0 ]
   then
-    PS1="${GREEN}\u@\h ${BLUE}\w${YELLOW}$(__git_ps1 ".%s") ${BLUE}\$${OFF} "
+    PS1="$GREEN\u@\h $BLUE\w$YELLOW$(__git_ps1 ".%s") $BLUE\$$OFF "
   else
-    PS1="${RED}($EXIT_STATUS)${GREEN}\u@\h ${BLUE}\w${YELLOW}$(__git_ps1 ".%s") ${BLUE}\$${OFF} "
+    PS1="$RED$EXIT_STATUS.$GREEN\u@\h $BLUE\w$YELLOW$(__git_ps1 ".%s") $BLUE\$$OFF "
   fi
 }
 PROMPT_COMMAND=set_prompt
