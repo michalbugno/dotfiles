@@ -4,16 +4,17 @@
 # localhost is used to configure the loopback interface
 # when the system is booting.  Do not change this entry.
 ##
-127.0.0.1      localhost
-255.255.255.255        broadcasthost
-::1             localhost
-fe80::1%lo0    localhost
-89.248.165.10  stallman
-149.156.98.60  student
-89.174.213.155 sezam
-10.0.0.254     pentla
-149.156.100.64 wierzba
-149.156.195.60 ernie
-149.156.100.227        jagular
-89.74.142.13   gzyms
-149.156.100.225        herman
+127.0.0.1        localhost
+255.255.255.255  broadcasthost
+::1              localhost
+fe80::1%lo0      localhost
+89.248.165.10    stallman
+149.156.98.60    student
+89.174.213.155   sezam
+10.0.0.254       pentla
+149.156.100.64   wierzba
+149.156.195.60   ernie
+149.156.100.227  jagular
+89.74.142.13     gzyms
+149.156.100.225  herman
+87.207.159.111   pig
