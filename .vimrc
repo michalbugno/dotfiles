@@ -5,35 +5,35 @@ com WQ wq
 
 colorscheme wombat
 
+" share clipboard
+set clipboard=unnamed
+
+let mapleader = "\<Space>"
+nmap <leader>w :w!<cr>
+
+set colorcolumn=80
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+
+let g:ctrlp_map = "<Leader>f"
+
 set visualbell t_vb=
 set nofoldenable
 
-"
-" command + num tabs
-map <d-1> :tabn 1<Return>
-map <d-2> :tabn 2<Return>
-map <d-3> :tabn 3<Return>
-map <d-4> :tabn 4<Return>
-map <d-5> :tabn 5<Return>
-map <d-6> :tabn 6<Return>
-map <d-7> :tabn 7<Return>
-imap <d-1> <Esc>:tabn 1<Return>
-imap <d-2> <Esc>:tabn 2<Return>
-imap <d-3> <Esc>:tabn 3<Return>
-imap <d-4> <Esc>:tabn 4<Return>
-imap <d-5> <Esc>:tabn 5<Return>
-imap <d-6> <Esc>:tabn 6<Return>
-imap <d-7> <Esc>:tabn 7<Return>
 
 """"""""""""""""
 " Filetypes
 """"""""""""""""""""
-" autocmd! BufRead,BufNewFile *.m setfiletype objc
-" autocmd! BufRead,BufNewFile *.h setfiletype objc
 autocmd! BufRead,BufNewFile *.c set tabstop=4 noexpandtab shiftwidth=4
-" autocmd! BufRead,BufNewFile *.haml setfiletype haml
-" autocmd! BufNewFile,BufRead *.yaml,*.yml setfiletype yaml
-
 
 set wrapscan
 set textwidth=80
