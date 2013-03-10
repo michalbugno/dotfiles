@@ -8,6 +8,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+Bundle 'rodjek/vim-puppet'
 
 let g:ctrlp_map = "<Leader>f"
 
