@@ -1,9 +1,23 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+
+let g:ctrlp_map = "<Leader>f"
+
 com Q q
 com W w
 com Wq wq
 com WQ wq
 
-colorscheme wombat
+colorscheme solarized
+set background=dark
 
 " share clipboard
 set clipboard=unnamed
@@ -11,20 +25,10 @@ set clipboard=unnamed
 let mapleader = "\<Space>"
 nmap <leader>w :w!<cr>
 
+" scroll when you are that far from edge
+set scrolloff=8
+
 set colorcolumn=80
-
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-
-Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-
-let g:ctrlp_map = "<Leader>f"
 
 set visualbell t_vb=
 set nofoldenable
@@ -68,8 +72,6 @@ filetype indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 1 important
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" disable the VI compatibility
-set nocompatible
 
 " disable the insert mode on default
 set noinsertmode
@@ -113,7 +115,6 @@ set numberwidth=3
 " 5 syntax, highlighting and spelling
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set the dark background - save your eyes
-set background=dark
 
 " enable syntax highlighting
 syntax on
