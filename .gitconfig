@@ -9,3 +9,8 @@
 
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
+[alias]
+	di = diff
+	sta = stash
+	st = status
+	ci = commit
