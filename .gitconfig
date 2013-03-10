@@ -1,7 +1,5 @@
 [user]
-  name = Michal Bugno
-  email = michal.bugno@gmail.com
+	name = Michal Bugno
+	email = michal.bugno@gmail.com
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	ui = true
