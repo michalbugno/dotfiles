@@ -5,7 +5,7 @@
 	ui = true
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /opt/boxen/config/git/gitignore
 
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
