@@ -10,6 +10,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'kchmck/vim-coffee-script'
 
 let g:ctrlp_map = "<Leader>f"
 
