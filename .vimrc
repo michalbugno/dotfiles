@@ -13,6 +13,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'kchmck/vim-coffee-script'
 
 let g:ctrlp_map = "<Leader>f"
+let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git'
 
 com Q q
 com W w
