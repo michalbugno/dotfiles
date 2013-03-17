@@ -24,8 +24,6 @@ function set_prompt {
 }
 PROMPT_COMMAND=set_prompt
 
-function aws () {
- ssh -i ~/.ssh/fs.pem ubuntu@$1
-}
+source /Users/msq/.base_profile.bash
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
