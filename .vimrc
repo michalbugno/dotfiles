@@ -11,6 +11,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
 
 let g:ctrlp_map = "<Leader>f"
 let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git'
@@ -42,7 +43,7 @@ set nofoldenable
 set laststatus=2
 
 set wrapscan
-set textwidth=80
+" set textwidth=80
 
 set shortmess+=I
 
