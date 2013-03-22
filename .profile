@@ -27,3 +27,5 @@ PROMPT_COMMAND=set_prompt
 source /Users/msq/.base_profile.bash
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+fortune -a
