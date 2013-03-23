@@ -1,16 +1,26 @@
 [user]
-	name = Michal Bugno
-	email = michal.bugno@gmail.com
+  name = Michal Bugno
+  email = michal.bugno@gmail.com
+
 [color]
-	ui = true
+  ui = true
 
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
 
 [credential]
-	helper = /opt/boxen/bin/boxen-git-credential
+  helper = /opt/boxen/bin/boxen-git-credential
+
 [alias]
-	di = diff
-	sta = stash
-	st = status
-	ci = commit
+  d = diff
+  s = status
+  c = commit
+  l = log --abbrev-commit --graph --format='%Cgreen%h %Cblue%ad%Cred%d %Creset%s %Cgreen%an' --decorate=short --date=short
+  g = grep
+  p = push
+
+[push]
+  default = upstream # when git push, pushes only current branch to upstream
+
+[help]
+  autocorrect = 1
