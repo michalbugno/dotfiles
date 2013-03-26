@@ -14,6 +14,7 @@
 [alias]
   d = diff
   s = status
+  st = status
   c = commit
   l = log --abbrev-commit --graph --format='%Cgreen%h %Cblue%ad%Cred%d %Creset%s %Cgreen%an' --decorate=short --date=short
   g = grep

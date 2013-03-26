@@ -24,7 +24,7 @@ function set_prompt {
 }
 PROMPT_COMMAND=set_prompt
 
-source /Users/msq/.base_profile.bash
+[ -f /Users/msq/.base_profile.bash ] && source /Users/msq/.base_profile.bash
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
