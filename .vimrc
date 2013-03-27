@@ -141,6 +141,7 @@ set backup
 
 " where to keep backups
 set backupdir=/Users/msq/.vim/backup,/tmp
+set directory=/Users/msq/.vim/backup,/tmp
 
 " keep n last commands
 set history=100
