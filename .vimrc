@@ -12,9 +12,10 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
+Bundle 'groenewege/vim-less'
 
 let g:ctrlp_map = "<Leader>f"
-let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git'
+let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git\|tmp'
 
 com Q q
 com W w
@@ -60,6 +61,8 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 filetype plugin on
 filetype indent on
+
+au BufRead,BufNewFile *.hamlc set ft=haml
 
 " disable the insert mode on default
 set noinsertmode
