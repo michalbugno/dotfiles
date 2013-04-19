@@ -5,8 +5,8 @@ export CLICOLOR=1
 alias ll='ls -lh'
 alias g='git'
 
-source /Users/msq/my/dotfiles/bash/git-prompt.sh
-source /Users/msq/my/dotfiles/bash/git-completion.bash
+source /Users/msq/Projects/dotfiles/bash/git-prompt.sh
+source /Users/msq/Projects/dotfiles/bash/git-completion.bash
 
 function set_prompt {
   EXIT_STATUS=$?
