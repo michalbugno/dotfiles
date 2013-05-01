@@ -9,6 +9,8 @@ export CLICOLOR=1
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 function set_prompt {
+  echo -ne "\033]0;${PWD}\007"
+
   EXIT_STATUS=$?
   OFF="\[\033[00m\]"
   RED="\[\033[00;31m\]"
