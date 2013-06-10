@@ -79,6 +79,12 @@ set smartcase
 " show special chars at eol/trailing spaces etc.
 set list
 
+" default to utf-8
+set encoding=utf-8
+
+" default terminal encoding
+set termencoding=utf-8
+
 " define those special chars
 set listchars=tab:»\ ,trail:·
 
@@ -154,9 +160,3 @@ set suffixes=.bak,~,.h,.swp,.aux,.log,.out,.toc
 
 " ignore those files when searching
 set wildignore=*.o,*.pdf,*.class,*.pyc
-
-" default to utf-8
-set encoding=utf-8
-
-" default terminal encoding
-set termencoding=utf-8
