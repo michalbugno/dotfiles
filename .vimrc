@@ -22,7 +22,11 @@ com W w
 com Wq wq
 com WQ wq
 
-colorscheme solarized
+try
+  colorscheme solarized
+catch
+endtry
+
 set background=dark
 
 " share clipboard
