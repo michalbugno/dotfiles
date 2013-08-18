@@ -3,8 +3,8 @@ export SVNEDITOR='vim -f'
 export CLICOLOR=1
 
 [ -f ~/.alias ] && source ~/.alias
-[ -f ~/Projects/dotfiles/bash/git-prompt.sh ] && source ~/Projects/dotfiles/bash/git-prompt.sh
-[ -f ~/Projects/dotfiles/bash/git-completion.bash ] && source ~/Projects/dotfiles/bash/git-completion.bash
+[ -f ~/dotfiles/bash/git-prompt.sh ] && source ~/dotfiles/bash/git-prompt.sh
+[ -f ~/dotfiles/bash/git-completion.bash ] && source ~/dotfiles/bash/git-completion.bash
 [ -f ~/.base_profile.bash ] && source ~/.base_profile.bash
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
@@ -28,3 +28,4 @@ function set_prompt {
 PROMPT_COMMAND=set_prompt
 
 fortune -a
+source /Users/msq/.rbenvrc
