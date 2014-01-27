@@ -1,4 +1,5 @@
 alias ll='ls -lh'
 alias g='git'
 alias v='vim'
-alias vm='cd /Users/msq/Projects/base/overlord; vagrant ssh'
+alias vm='ssh vm'
+alias ber='bundle exec rspec'
