@@ -28,4 +28,10 @@ function set_prompt {
     PS1="$RED$EXIT_STATUS.$GREEN\u@\h $BLUE\w$YELLOW$(__git_ps1 ".%s") $BLUE\$$OFF "
   fi
 }
+
+function b {
+  cd ~/VMs/base
+  vagrant ssh
+}
+
 PROMPT_COMMAND=set_prompt

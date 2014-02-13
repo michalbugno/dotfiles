@@ -1,5 +1,6 @@
 alias ll='ls -lh'
 alias g='git'
 alias v='vim'
-alias vm='ssh vm'
+alias vssh='vagrant ssh'
 alias ber='bundle exec rspec'
+alias shit='mplayer Dropbox\ \(Base\ CRM\)/Public/short_mp3s/shiiiit.mp3'
