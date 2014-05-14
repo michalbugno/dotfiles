@@ -2,7 +2,7 @@ export EDITOR='vim -f'
 export SVNEDITOR='vim -f'
 export CLICOLOR=1
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH:$HOME/cellar/bin"
 eval "$(rbenv init -)"
 
 [ -f ~/.alias ] && source ~/.alias
@@ -32,6 +32,18 @@ function set_prompt {
 function b {
   cd ~/VMs/base
   vagrant ssh
+}
+
+function gp {
+  grid console $1 production
+}
+
+function gs {
+  grid console $1 sandbox
+}
+
+function m {
+  grid console mailman production
 }
 
 PROMPT_COMMAND=set_prompt
