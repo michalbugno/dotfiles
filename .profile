@@ -46,4 +46,7 @@ function m {
   grid console mailman production
 }
 
+function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+
+
 PROMPT_COMMAND=set_prompt
