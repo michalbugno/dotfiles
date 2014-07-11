@@ -35,15 +35,19 @@ function b {
 }
 
 function gp {
-  grid console $1 production
+  grid console $1 production ${@:2}
 }
 
 function gs {
-  grid console $1 sandbox
+  grid console $1 sandbox ${@:2}
+}
+
+function gst {
+  grid console $1 staging ${@:2}
 }
 
 function m {
-  grid console mailman production
+  grid console mailman production $@
 }
 
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
