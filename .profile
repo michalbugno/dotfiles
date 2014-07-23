@@ -5,6 +5,14 @@ export CLICOLOR=1
 export PATH="$HOME/.rbenv/bin:$PATH:$HOME/cellar/bin"
 eval "$(rbenv init -)"
 
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+  . "${HOME}/.gpg-agent-info"
+  export GPG_AGENT_INFO
+  export SSH_AUTH_SOCK
+else
+  eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
+fi
+
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/Code/dotfiles/bash/git-prompt.sh ] && source ~/Code/dotfiles/bash/git-prompt.sh
 [ -f ~/Code/dotfiles/bash/git-completion.bash ] && source ~/Code/dotfiles/bash/git-completion.bash
