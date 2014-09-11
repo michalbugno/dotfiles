@@ -14,6 +14,7 @@ else
 fi
 
 [ -f ~/.alias ] && source ~/.alias
+[ -f ~/.profile_custom ] && source ~/.profile_custom
 [ -f ~/Code/dotfiles/bash/git-prompt.sh ] && source ~/Code/dotfiles/bash/git-prompt.sh
 [ -f ~/Code/dotfiles/bash/git-completion.bash ] && source ~/Code/dotfiles/bash/git-completion.bash
 [ -f ~/.dotfiles/bash/git-prompt.sh ] && source ~/.dotfiles/bash/git-prompt.sh
