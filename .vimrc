@@ -14,12 +14,14 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'nono/vim-handlebars'
 Plugin 'groenewege/vim-less'
 Plugin 'rking/ag.vim'
+Plugin 'mv/mv-vim-nginx'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
 
 let g:ctrlp_map = "<Leader>f"
-let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git\|tmp'
+let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git\|tmp\|public/'
 
 com Q q
 com W w
