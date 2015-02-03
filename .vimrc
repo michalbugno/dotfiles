@@ -170,3 +170,5 @@ set suffixes=.bak,~,.h,.swp,.aux,.log,.out,.toc
 
 " ignore those files when searching
 set wildignore=*.o,*.pdf,*.class,*.pyc
+
+set term=screen-256color
