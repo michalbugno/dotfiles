@@ -1,24 +1,19 @@
 export EDITOR='vim -f'
 export SVNEDITOR='vim -f'
 export CLICOLOR=1
-
-export PATH="$HOME/.rbenv/bin:$PATH:$HOME/cellar/bin"
-eval "$(rbenv init -)"
-
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-  . "${HOME}/.gpg-agent-info"
-  export GPG_AGENT_INFO
-  export SSH_AUTH_SOCK
-else
-  eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
-fi
+export BUNDLE_PATH='.bundle'
+export PATH="$PATH:$HOME/cellar/bin"
+export DISABLE_DATA_COLLECTION='true'
 
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.profile_custom ] && source ~/.profile_custom
-[ -f ~/Code/dotfiles/bash/git-prompt.sh ] && source ~/Code/dotfiles/bash/git-prompt.sh
-[ -f ~/Code/dotfiles/bash/git-completion.bash ] && source ~/Code/dotfiles/bash/git-completion.bash
+[ -f ~/code/private/dotfiles/bash/git-prompt.sh ] && source ~/code/private/dotfiles/bash/git-prompt.sh
+[ -f ~/code/private/dotfiles/bash/git-completion.bash ] && source ~/code/private/dotfiles/bash/git-completion.bash
 [ -f ~/.dotfiles/bash/git-prompt.sh ] && source ~/.dotfiles/bash/git-prompt.sh
 [ -f ~/.dotfiles/bash/git-completion.bash ] && source ~/.dotfiles/bash/git-completion.bash
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 function set_prompt {
   EXIT_STATUS=$?
