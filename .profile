@@ -3,7 +3,9 @@ export SVNEDITOR='vim -f'
 export CLICOLOR=1
 export BUNDLE_PATH='.bundle'
 export PATH="$PATH:$HOME/cellar/bin"
-export DISABLE_DATA_COLLECTION='true'
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.profile_custom ] && source ~/.profile_custom
@@ -58,3 +60,5 @@ function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 
 
 PROMPT_COMMAND=set_prompt
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
