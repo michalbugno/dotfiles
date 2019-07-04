@@ -9,8 +9,6 @@ source /usr/local/share/chruby/auto.sh
 
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.profile_custom ] && source ~/.profile_custom
-[ -f ~/code/private/dotfiles/bash/git-prompt.sh ] && source ~/code/private/dotfiles/bash/git-prompt.sh
-[ -f ~/code/private/dotfiles/bash/git-completion.bash ] && source ~/code/private/dotfiles/bash/git-completion.bash
 [ -f ~/.dotfiles/bash/git-prompt.sh ] && source ~/.dotfiles/bash/git-prompt.sh
 [ -f ~/.dotfiles/bash/git-completion.bash ] && source ~/.dotfiles/bash/git-completion.bash
 
