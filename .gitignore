@@ -3,3 +3,4 @@
 .ruby-version
 .vim/bundle
 .bundle
+docker-compose.override.yml
