@@ -16,12 +16,14 @@ Plugin 'groenewege/vim-less'
 Plugin 'rking/ag.vim'
 Plugin 'mv/mv-vim-nginx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()
 filetype plugin indent on
 
 let g:ctrlp_map = "<Leader>f"
 let g:ctrlp_custom_ignore = 'build/\|\.agility-shared\|node_modules\|\.git\|tmp\|public/'
+let g:ale_ruby_rubocop_executable = 'bundle'
 
 com Q q
 com W w
