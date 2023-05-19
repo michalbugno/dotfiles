@@ -17,6 +17,15 @@ Plugin 'rking/ag.vim'
 Plugin 'mv/mv-vim-nginx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'dense-analysis/ale'
+Plugin 'mxw/vim-jsx'
+Plugin 'hashivim/vim-terraform'
+Plugin 'chr4/nginx.vim'
+Plugin 'dense-analysis/ale'
+Plugin 'mhinz/vim-mix-format'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'prettier/vim-prettier'
+Plugin 'ledger/vim-ledger'
 
 call vundle#end()
 filetype plugin indent on
@@ -174,3 +183,5 @@ set suffixes=.bak,~,.h,.swp,.aux,.log,.out,.toc
 set wildignore=*.o,*.pdf,*.class,*.pyc
 
 set term=screen-256color
+
+let g:ale_ruby_rubocop_executable = 'bundle'
