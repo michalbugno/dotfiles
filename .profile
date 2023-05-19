@@ -2,10 +2,9 @@ export EDITOR='vim -f'
 export SVNEDITOR='vim -f'
 export CLICOLOR=1
 export BUNDLE_PATH='.bundle'
-export PATH="$PATH:$HOME/cellar/bin"
-
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+export PATH="$HOME/.bin:$PATH:$HOME/cellar/bin:$HOME/code/getprobe/infra_scripts/bin"
+export HISTIGNORE="j *"
+export BUILDAH_FORMAT=docker
 
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.profile_custom ] && source ~/.profile_custom
@@ -33,30 +32,12 @@ function set_prompt {
   fi
 }
 
-function b {
-  cd ~/VMs/base
-  vagrant ssh
-}
-
-function gp {
-  grid console $1 production ${@:2}
-}
-
-function gs {
-  grid console $1 sandbox ${@:2}
-}
-
-function gst {
-  grid console $1 staging ${@:2}
-}
-
-function m {
-  grid console mailman production $@
-}
-
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
-
 
 PROMPT_COMMAND=set_prompt
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+. "/usr/local/opt/nvm/nvm.sh" --no-use
+. "$HOME/.cargo/env"
+export PATH="/usr/local/opt/redis@6.2/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
