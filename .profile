@@ -1,18 +1,16 @@
-export EDITOR='vim -f'
-export SVNEDITOR='vim -f'
+export EDITOR='nvim -f'
+export SVNEDITOR='nvim -f'
 export CLICOLOR=1
 export BUNDLE_PATH='.bundle'
 export PATH="$HOME/.bin:$PATH:$HOME/cellar/bin:$HOME/code/getprobe/infra_scripts/bin"
 export HISTIGNORE="j *"
 export BUILDAH_FORMAT=docker
+export AWS_REGION=us-east-1
 
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.profile_custom ] && source ~/.profile_custom
-[ -f ~/.dotfiles/bash/git-prompt.sh ] && source ~/.dotfiles/bash/git-prompt.sh
-[ -f ~/.dotfiles/bash/git-completion.bash ] && source ~/.dotfiles/bash/git-completion.bash
-
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+[ -f ~/code/dotfiles/bash/git-prompt.sh ] && source ~/code/dotfiles/bash/git-prompt.sh
+[ -f ~/code/dotfiles/bash/git-completion.bash ] && source ~/code/dotfiles/bash/git-completion.bash
 
 function set_prompt {
   EXIT_STATUS=$?
@@ -35,9 +33,10 @@ function set_prompt {
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 
 PROMPT_COMMAND=set_prompt
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh" --no-use
-. "$HOME/.cargo/env"
+
+eval "$(direnv hook bash)"
+. "$HOME/.asdf/asdf.sh"
+
 export PATH="/usr/local/opt/redis@6.2/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
