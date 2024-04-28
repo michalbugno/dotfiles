@@ -1,12 +1,5 @@
-source .profile
-
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
+[ -f ~/code/dotfiles/bash/git-prompt.sh ] && source ~/code/dotfiles/bash/git-prompt.sh
+[ -f ~/code/dotfiles/bash/git-completion.bash ] && source ~/code/dotfiles/bash/git-completion.bash
 
 function set_prompt {
   EXIT_STATUS=$?
@@ -27,7 +20,3 @@ function set_prompt {
 }
 
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
-
-# [ ${ZSH_VERSION} ] && precmd() { set_prompt; }
-
-eval "$(direnv hook zsh)"
