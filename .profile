@@ -7,6 +7,9 @@ export HISTIGNORE="j *"
 export BUILDAH_FORMAT=docker
 export AWS_REGION=us-east-1
 
+eval $(/opt/homebrew/bin/brew shellenv)
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 [ -f ~/.alias ] && source ~/.alias
 [ -f ~/.profile_custom ] && source ~/.profile_custom
 [ -f ~/code/dotfiles/bash/git-prompt.sh ] && source ~/code/dotfiles/bash/git-prompt.sh
@@ -32,10 +35,9 @@ function set_prompt {
 
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 
-PROMPT_COMMAND=set_prompt
+# [ ${ZSH_VERSION} ] && precmd() { set_prompt; }
 
-eval "$(direnv hook bash)"
-. "$HOME/.asdf/asdf.sh"
+[ ${ZSH_VERSION} ] && eval "$(direnv hook zsh)"
 
 export PATH="/usr/local/opt/redis@6.2/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"

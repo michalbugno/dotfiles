@@ -1,45 +1,25 @@
-# The following lines were added by compinstall
+source .profile
 
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' matcher-list '' 'r:|[._-]=** r:|=**' 'l:|=* r:|=*'
-zstyle :compinstall filename '/Users/msq/.zshrc'
-zstyle ':completion:*' menu select=1
-zstyle ':completion:*' original true
-zstyle ':completion:*' preserve-prefix '//[^/]##/'
+function set_prompt {
+  EXIT_STATUS=$?
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+  echo -ne "\033]0;${PWD}\007"
 
-# if cannot find command - perform cd
-# setopt autocd
+  OFF="\[\033[00m\]"
+  RED="\[\033[00;31m\]"
+  GREEN="\[\033[00;32m\]"
+  YELLOW="\[\033[00;33m\]"
+  BLUE="\[\033[00;34m\]"
+  if [ $EXIT_STATUS -eq 0 ]
+  then
+    PS1="$GREEN\u@\h $BLUE\w$YELLOW$(__git_ps1 ".%s") $BLUE\$$OFF "
+  else
+    PS1="$RED$EXIT_STATUS.$GREEN\u@\h $BLUE\w$YELLOW$(__git_ps1 ".%s") $BLUE\$$OFF "
+  fi
+}
 
-unsetopt beep # get lost, beep
+function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 
-PROMPT='(%?)%B%n%b@%m:%2d%# ' # left prompt
-RPROMPT='%D %*' # right prompt
+# [ ${ZSH_VERSION} ] && precmd() { set_prompt; }
 
-# macports and tools
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/grace/bin:$HOME/Development/toolbox/bin:$PATH
-
-# export LANG='pl_PL.UTF-8'
-# export LANG='C'
-export EDITOR='mvim -f'
-export SVNEDITOR='mvim -f'
-export CLICOLOR=1 # enable colored ls
-export LSCOLORS="Cxgxxxxxxxxxxxxxxxxxxx" # color definitions (pairs foreground-background)
-export PYTHONPATH=/opt/local/lib/svn-python:/opt/local/lib/python2.5/site-packages:/Library/Python/2.5/site-packages/scons-0.98.0-py2.5.egg/scons-0.98.0
-export GDFONTPATH=/Library/Fonts # gnuplot
-export DYLD_LIBRARY_PATH=/opt/local/oracle/
-export MANPATH=/opt/local/share/man/:$MANPATH
-export RUBYLIB=/opt/local/lib
-
-# home-end bindings
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-
-alias java=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Commands/java
+eval "$(direnv hook zsh)"
